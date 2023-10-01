@@ -1,0 +1,32 @@
+@use './_custom.sass' as custom
+:root
+  font-family: custom.$ff-body, system-ui, Avenir, Helvetica, Arial, sans-serif
+  line-height: 1.5
+  font-weight: 400
+  font-synthesis: none
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  -webkit-text-size-adjust: 100%
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+a
+  font-weight: 500
+  color: #646cff
+  text-decoration: inherit
+  &:hover
+    color: #535bf2
+
+span.svg-wrapper
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  svg
+    max-width: 3rem
+    width: 100%
+    height: auto
+
+h1, h2, h3, h4, h5, h6
+  font-family: custom.$ff-decor

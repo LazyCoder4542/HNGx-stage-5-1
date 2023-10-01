@@ -1,0 +1,40 @@
+$ff-body: 'Work Sans'
+$ff-decor: 'Sora'
+$clr-primary: #120B48
+$clr-primary-300: #605C84
+$clr-primary-400: #413C6D
+$clr-primary-800: #0A0628
+$clr-light: #FAFDFF
+$clr-neutral: #1D1E29
+$page-padding: 4rem
+@mixin button()
+    display: inline-flex
+    align-items: center
+    cursor: pointer
+@mixin primaryButton()
+    padding: 0.75rem 2rem
+    border: 1px solid #ECF0F1
+    border-radius: 0.125rem
+    transition-property: background-color transform
+    transition-duration: 500ms
+    &:hover
+        transform: translateY(-.5rem)
+        background-color: $clr-neutral
+@mixin secondaryButton()
+    flex-direction: column
+    position: relative
+    &::after
+        position: absolute
+        background-color: #ECF0F1
+        display: block
+        transform: translate(-50%, .25rem)
+        content: ""
+        left: 50%
+        top: 100%
+        width: 40%
+        height: .25rem
+        border-radius: 999px
+        transition: width 500ms
+    &:hover::after
+        width: 100%
+        

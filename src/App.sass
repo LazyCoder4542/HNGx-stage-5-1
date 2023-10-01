@@ -1,0 +1,51 @@
+@use './_custom.sass' as custom
+.logo
+  display: inline-flex
+  align-items: center
+  gap: 1rem
+  span:nth-child(1)
+    width: 2rem
+  span:nth-child(2)
+    font-family: custom.$ff-decor
+    font-size: 1rem
+    font-weight: 700
+    color: custom.$clr-primary
+  &.logo-white
+    span:nth-child(2)
+      color: #fff
+
+input
+  font-family: inherit
+  background: transparent
+  outline-width: 0
+  border-color: transparent
+  &::placeholder
+    color: inherit
+
+.logo:hover
+  filter: drop-shadow(0 0 2em #646cffaa)
+.logo.react:hover 
+  filter: drop-shadow(0 0 2em #61dafbaa)
+
+.btn
+  display: inline-flex
+  padding: 1rem
+  justify-content: center
+  outline-color: transparent
+  border-color: transparent
+  border-radius: 0.75rem
+  cursor: pointer
+  gap: .5rem
+  &.btn-primary
+    background-color: custom.$clr-primary
+    color: custom.$clr-light
+
+
+body
+  min-width: 320px
+  min-height: 100vh
+
+main
+  display: flex
+  flex-direction: column
+  min-height: 100vh

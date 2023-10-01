@@ -1,0 +1,74 @@
+#record
+  color: #fff
+  display: flex
+  gap: 2.5rem
+  align-items: center
+  .images
+    width: 9.75rem
+    height: 9.75rem
+    border-radius: 50%
+    overflow: hidden
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, .5)
+    video
+      width: 100%
+      height: 100%
+      object-fit: cover
+    img
+      aspect-ratio: 1 / 1
+      object-fit: cover
+      width: 100%
+  > .wrapper
+    border-radius: 999px
+    background: #141414
+    display: flex
+    padding: .75rem 2rem
+    gap: 1rem
+    border: .5rem solid #BEBEBE
+    align-items: center
+    > div.time
+      display: inline-flex
+      gap: .5rem
+    > div.divider
+      align-self: stretch
+      height: auto
+      border: 0.04rem solid #E8E8E8
+    > div.actions
+      display: inline-flex
+      gap: 1.5rem
+      > div
+        display: inline-flex
+        flex-direction: column
+        align-items: center
+        font-size: .75rem
+        font-weight: 500
+        > span:nth-child(1)
+          background-color: #fff
+          width: 2.75rem
+          height: 2.75rem
+          border-radius: 50%
+          > svg
+            width: auto
+    > div.remove
+      span
+        border: 1px solid #000
+        background-color: #4B4B4B
+        width: 1.5rem
+        border-radius: 50%
+        height: 1.5rem
+        box-sizing: content-box
+        padding: .63rem
+
+.disabled
+  filter: grayscale(50%)
+  &::after
+    content: ""
+    display: block
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%) rotate(45deg)
+    width: 4px
+    height: 80%
+    border-radius: 999px
+    position: absolute
+    transform-origin: center
+    background: red

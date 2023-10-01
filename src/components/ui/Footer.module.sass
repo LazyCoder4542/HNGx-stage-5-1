@@ -1,0 +1,29 @@
+@use "./../../_custom" as custom
+.footer
+  background-color: custom.$clr-primary
+  margin-top: auto
+  padding: 4rem custom.$page-padding
+  display: flex
+  gap: 1rem
+  align-items: flex-start
+  color: #fff
+  justify-content: space-between
+  > *
+    flex-shrink: 0
+  > .nav
+    flex-basis: 60%
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 4rem
+    > div
+      display: flex
+      flex-direction: column
+      gap: 2rem
+      > ul
+        font-weight: 300
+        list-style: none
+        display: inline-flex
+        flex-direction: column
+        gap: inherit
+        li
+          cursor: pointer

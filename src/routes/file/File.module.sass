@@ -1,0 +1,97 @@
+@use "./../../_custom" as custom
+.file
+  padding: 1rem custom.$page-padding
+  .box
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    > div
+      border: 1px solid transparent
+      display: flex
+      flex-direction: column
+    > div:nth-child(1)
+      border-right-color: rgba(182, 179, 198, 0.50)
+      padding-right: 2rem
+      gap: 1rem
+      > .content
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        > div:nth-child(1)
+          display: flex
+          gap: .5rem
+          flex-direction: column
+          > div
+            display: inline-flex
+            align-items: center
+            gap: 1rem
+            span:nth-child(1)
+              font-weight: 600
+              font-size: 1.25rem
+              font-family: custom.$ff-decor
+              color: custom.$clr-primary-400
+        > div:nth-child(2)
+          border-radius: 1rem
+          background-color: rgba(182, 179, 198, 0.20)
+          padding: .75rem 1rem
+          display: inline-flex
+          width: 90%
+          justify-content: space-between
+          gap: 1rem
+          > input
+            width: 100%
+            color: rgba(67, 67, 67, 0.80)
+            font-size: 1rem
+          > div
+            border-radius: .5rem
+            padding: .5rem 1rem
+            color: #fff
+            background-color: custom.$clr-primary-300
+        > div:nth-child(3)
+          display: flex
+          flex-direction: column
+          gap: .5rem
+          > div:nth-child(2)
+            border-radius: 1rem
+            border: 0.5px solid #929292
+            padding: .75rem 1rem
+            display: inline-flex
+            width: 90%
+            justify-content: space-between
+            gap: 1rem
+            > input
+              width: 100%
+              color: rgba(67, 67, 67, 0.80)
+              font-size: 1rem
+              text-overflow: clip
+            > div:nth-child(2)
+              flex-shrink: 0
+              display: inline-flex
+              gap: .5rem
+              border-radius: .5rem
+              padding: .5rem 1rem
+              border: 1px solid custom.$clr-primary
+        > div:nth-child(4)
+          display: flex
+          flex-direction: column
+          gap: .5rem
+          > div:nth-child(2)
+            display: inline-flex
+            gap: .75rem
+            > div
+              cursor: pointer
+              padding: .5rem
+              border-radius: 0.5rem
+              gap: .5rem
+              border: 1px solid custom.$clr-primary-800
+              display: inline-flex
+    > div:nth-child(2)
+      border-left-color: rgba(182, 179, 198, 0.50)
+      padding-left: 2rem
+    .video
+      width: 100%
+      border-radius: .5rem
+      border: .5rem solid custom.$clr-primary-300
+      overflow: hidden
+      video
+        width: 100%
+        vertical-align: bottom

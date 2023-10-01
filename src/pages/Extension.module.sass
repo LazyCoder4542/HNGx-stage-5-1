@@ -1,0 +1,47 @@
+@use './../_custom.sass' as custom
+.extension
+  min-height: 100vh
+  padding: 1.5rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  gap: 2rem
+  header
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: 1rem
+    justify-content: space-between
+    .icons
+      display: inline-flex
+      margin-left: auto
+    p
+      flex-basis: 100%
+  .box
+    display: flex
+    flex-direction: column
+    gap: 1.5rem
+    > div:nth-child(1)
+      display: flex
+      justify-content: space-around
+      > div
+        display: inline-flex
+        flex-direction: column
+        gap: .5rem
+        align-items: center
+    > div:nth-child(2)
+      display: flex
+      flex-direction: column
+      gap: 1.5rem
+      > div
+        display: flex
+        padding: .75rem 1rem
+        align-items: center
+        gap: .5rem
+        border-radius: var(--Inner-Radius, 0.75rem)
+        border: 1px solid var(--primary-primary-600, #100A42)
+        span:nth-child(1)
+          width: 1.5rem
+          height: 1.5rem
+        > .toggle
+          margin-left: auto
