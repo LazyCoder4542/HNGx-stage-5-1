@@ -1,7 +1,7 @@
 //import blah from "context?script"
 chrome.runtime.onInstalled.addListener(function() {
   chrome.tabs.create({
-    url: 'https://mail.google.com',
+    url: 'https://hngx-5-1-adeola.netlify.app/login',
     active: true
   });
 
@@ -23,7 +23,7 @@ chrome.runtime.onMessage.addListener(
                 "from the extension");
     if (request.message === "recording_completed") {
       chrome.tabs.create({
-        url: `http://localhost:5173/file/${request.fileName}`,
+        url: `https://hngx-5-1-adeola.netlify.app/file/${request.fileName}`,
         active: true
       });
       sendResponse({response: "okay"})
