@@ -1,7 +1,8 @@
 //import blah from "context?script"
 chrome.runtime.onInstalled.addListener(function() {
+  chrome.tabs.reload();
   chrome.tabs.create({
-    url: 'https://hngx-5-1-adeola.netlify.app/login',
+    url: 'https://hngx-5-1-adeola.netlify.app/sign-up',
     active: true
   });
 

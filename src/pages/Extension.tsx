@@ -71,11 +71,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
             const [tab] = await chrome.tabs.query({active: true, lastFocusedWindow: true});
             console.log(tab.url)
             if (tab.id) {
-              const response = await chrome.tabs.sendMessage(tab.id, {message: "start_recording"});
-              if (response) {
-                window.close()
+              try {
+                const response = await chrome.tabs.sendMessage(tab.id, {message: "start_recording"});
+                if (response) {
+                  window.close()
+                }
+                console.log(response);
+              } catch {
+                chrome.tabs.reload();
               }
-              console.log(response);
             }
           }}
           >Start Recording</button>
