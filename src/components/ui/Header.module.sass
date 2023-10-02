@@ -1,9 +1,30 @@
 @use "./../../_custom" as custom
 .header
-  padding: 1rem custom.$page-padding
-  display: flex
-  gap: 1rem
-  justify-content: space-between
   > .nav
     display: inline-flex
     gap: 1rem
+  > .user
+    display: inline-flex
+    align-items: center
+    gap: 1rem
+    > .menu
+      position: relative
+      > div
+        z-index: 1
+        box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3)
+        width: max-content
+        padding: 1rem
+        background-color: white
+        transform: translateY(100%)
+        position: absolute
+        right: 0
+        bottom: 0
+        border-radius: .5rem
+        ul
+          list-style: none
+          li
+            cursor: pointer
+    a
+      color: inherit
+      &:hover
+        text-decoration: underline

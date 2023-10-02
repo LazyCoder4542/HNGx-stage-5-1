@@ -2,11 +2,18 @@
 import {
   createBrowserRouter,
   RouterProvider,
+  Outlet,
+  Link
 } from "react-router-dom";
 import './App.sass'
+import Icon from "./assets/icons/icon.svg?react";
 import Root from "./routes/Root";
 import File from "./routes/file/File";
 import Landing from "./routes/landing/Landing";
+import Login from "./routes/login/login";
+import Signup from "./routes/register/register";
+import ProtectedRoute from "./components/util/protectedRoute";
+import Home from "./routes/home/home";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +22,13 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: "Home"
+        element: <ProtectedRoute />,
+        children: [
+          {
+            path: "/",
+            element: <Home />
+          }
+        ]
       },
       {
         path: "/landing",
@@ -27,6 +40,33 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: "/",
+    element: (
+      <>
+        <header id="site-header">
+        <Link to="landing">
+          <div className="logo">
+            <span className="svg-wrapper">
+              <Icon />
+            </span>
+            <span>HelpMeOut</span>
+          </div>
+        </Link>
+        </header>
+        <Outlet />
+      </>
+    ),
+    children: [
+    {
+      path:"login",
+      element: <Login />
+    },
+    {
+      path: "sign-up",
+      element: <Signup />
+    },]
+  }
 ]);
 
 function App() {

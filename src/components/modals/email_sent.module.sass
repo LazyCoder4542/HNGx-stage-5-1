@@ -1,0 +1,25 @@
+@use "./../../_custom" as custom
+.email_sent
+  display: flex
+  text-align: center
+  gap: 1rem
+  flex-direction: column
+  align-items: center
+  > p > span
+    font-weight: 600
+  > div
+    margin-top: 3rem
+    gap: 1rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-size: .875rem
+    p
+      color: #141414
+    div
+      padding: .5rem .75rem
+    span
+      color: #7E7E7E
+    a
+      color: custom.$clr-primary
+      font-weight: 700
